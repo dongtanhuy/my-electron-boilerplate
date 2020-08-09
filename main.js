@@ -8,16 +8,8 @@ const { default: installExtension, REACT_DEVELOPER_TOOLS } = require('electron-d
 
 let mainWindow;
 console.log(`Running in ${process.env.NODE_ENV} mode`);
-// console.log('process.argv,', process.argv)
 let dev = process.env.NODE_ENV === 'development';
 
-// console.log('process.', process);
-// console.log('process.', process.env);
-// console.log('process prebuilt', /[\\/]electron-prebuilt[\\/]/.test(process.execPath));
-// console.log('process electron', /[\\/]electron[\\/]/.test(process.execPath));
-// if (process.defaultApp || /[\\/]electron-prebuilt[\\/]/.test(process.execPath) || /[\\/]electron[\\/]/.test(process.execPath)) {
-//   dev = true
-// }
 
 
 if (process.platform === 'win32') {
