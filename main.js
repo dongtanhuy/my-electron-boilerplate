@@ -32,7 +32,7 @@ function createWindow() {
     indexPath = url.format({
       protocol: 'http:',
       host: 'localhost:8080',
-      pathname: 'index.html',
+      pathname: '/',
       slashes: true
     })
   } else {
@@ -42,6 +42,7 @@ function createWindow() {
       slashes: true
     })
   }
+  console.log('createWindow -> indexPath', indexPath);
 
   mainWindow.loadURL(indexPath);
 

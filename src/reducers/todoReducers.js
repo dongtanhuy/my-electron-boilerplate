@@ -1,14 +1,12 @@
 import { TODO_ACTIONS } from '../constants/actionTypes';
-import {initialState} from './initialState';
+import { initialState } from './initialState';
 
-const todoReducer = (state = initialState, action) => {
+const todoReducer = (state = initialState.todos, action) => {
   switch(action.type) {
     case TODO_ACTIONS.ADD_TODO: 
-      return {
-        todos: [...state.todos, action.payload]
-      }
+      return [...state, action.payload];
     default:
-      return state.todos;
+      return state;
   }
 }
 

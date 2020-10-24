@@ -1,12 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-import './App.scss';
-
-const App  = () => (
-  <div className="App">
+const Home  = () => (
+  <div className="Home">
     <h1>Hello, electron!</h1>
     <p>Let's start building your awesome desktop app with electron and React!</p>
+    <Link to="/todos">Todo</Link>
   </div>
 );
 
-export default App;
+export default Home;

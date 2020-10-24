@@ -1,10 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
+import { HashRouter, Route } from 'react-router-dom';
 import configStore from './store';
-import App from './components/App';
+import App from './screens/App';
 
-// import './assets/style/app.scss';
 
 const store = configStore();
 let root = document.createElement('div');
@@ -13,7 +13,9 @@ document.body.appendChild(root);
 
 render(
   <Provider store={store}>
-    <App />
+    <HashRouter>
+      <Route path="/" component={App} />
+    </HashRouter>
   </Provider>, 
   document.getElementById('root')
 )
