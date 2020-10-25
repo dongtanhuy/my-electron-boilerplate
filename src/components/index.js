@@ -5,5 +5,5 @@ import Input from './Input';
 export {
   TodoList,
   TodoItem,
-  Input
-}
+  Input,
+};

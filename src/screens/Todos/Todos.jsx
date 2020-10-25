@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { TodoList } from '../../components';
-const Todos  = () => (
+
+const Todos = () => (
   <div className="TodoList">
     <h1>Todo List</h1>
     <TodoList />

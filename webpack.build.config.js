@@ -2,9 +2,9 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const BabiliPlugin = require('babili-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const defaultInclude = path.resolve(__dirname, 'src')
+const defaultInclude = path.resolve(__dirname, 'src');
 
 module.exports = {
   mode: 'production',
@@ -15,8 +15,8 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: 'css-loader'
-          }
+            loader: 'css-loader',
+          },
         ],
         include: defaultInclude,
       },
@@ -38,9 +38,9 @@ module.exports = {
       {
         test: /\.(eot|svg|ttf|woff|woff2)$/,
         use: [{ loader: 'file-loader?name=font/[name]__[hash:base64:5].[ext]' }],
-        include: defaultInclude
-      }
-    ]
+        include: defaultInclude,
+      },
+    ],
   },
   target: 'electron-renderer',
   plugins: [
@@ -49,20 +49,20 @@ module.exports = {
       // Options similar to the same options in webpackOptions.output
       // both options are optional
       filename: 'bundle.css',
-      chunkFilename: '[id].css'
+      chunkFilename: '[id].css',
     }),
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production')
+      'process.env.NODE_ENV': JSON.stringify('production'),
     }),
-    new BabiliPlugin()
+    new BabiliPlugin(),
   ],
   stats: {
     colors: true,
     children: false,
     chunks: false,
-    modules: false
+    modules: false,
   },
   resolve: {
-    extensions: ['.js', '.json', '.jsx']
-  }
-}
+    extensions: ['.js', '.json', '.jsx'],
+  },
+};

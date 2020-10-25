@@ -13,14 +13,14 @@ const Input = ({ placeholder }) => {
       dispatch(addTodoAction({ text: value, id: uuidv4() }));
       setValue('');
     }
-  }
+  };
 
   const onChange = (e) => {
-    setValue(e.target.value)
-  }
+    setValue(e.target.value);
+  };
   return (
     <input type="text" placeholder={placeholder} value={value} onChange={onChange} onKeyDown={onKeyDown} />
-  )
-}
+  );
+};
 
 export default Input;
